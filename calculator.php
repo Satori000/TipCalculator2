@@ -33,7 +33,7 @@ form {
     <h2> Tip Calculator </h2>
 
     Bill subtotal: $
-    <input type="text" name="subtotal" value = <?php echo $_POST["subtotal"]; ?> >
+    <input type="text" name="subtotal" value = <?php if($_POST["subtotal"]) {echo $_POST["subtotal"];} else {echo 0;}; ?> >
     <span class="error"> <?php echo $subtotalErr;?></span>
     <br><br>
     Tip Percentage:
